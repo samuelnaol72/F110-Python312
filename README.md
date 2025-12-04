@@ -66,14 +66,7 @@ cd ..
 cd test-package
 ```
 
-### 4.2 Install necessary system dependencies
-
-```bash
-sudo apt update
-sudo apt install ros-jazzy-ackermann-msgs
-```
-
-### 4.3 Build and source the workspace
+### 4.2 Build and source the workspace
 === IMPORTANT ===
 Before building, you must edit the map path in the ROS config file.
 
@@ -100,14 +93,14 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
 ```
-### 4.4. Test
-#### 4.4.1 Launch Simulator + ROS Bridge
+### 4.3. Test
+#### 4.3.1 Launch Simulator + ROS Bridge
 In Terminal 1(The same Terminal):
 ```bash
 ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ```
 This starts the simulator, publishes /scan, and waits for drive commands
-#### 4.4.2 Ackermann Drive / Teleoperation
+#### 4.3.2 Ackermann Drive / Teleoperation
 
 In Terminal 2:
 ```bash
@@ -115,6 +108,12 @@ source /opt/ros/jazzy/setup.bash
 source ~/f110-test-ws/F110-Python312/test-package/install/setup.bash
 ```
 Option A — Publish Ackermann commands manually
+Install if necessary
+```bash
+sudo apt update
+sudo apt install ros-jazzy-ackermann-msgs
+```
+Run:
 ```bash
 ros2 topic pub /drive ackermann_msgs/msg/AckermannDriveStamped \
 "{drive: {speed: 1.0, steering_angle: 0.3}}"
