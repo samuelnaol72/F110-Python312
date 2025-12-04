@@ -80,7 +80,39 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
 ```
-## Contributions:
+### 4.4. Test
+#### 4.4.1 Launch Simulator + ROS Bridge
+In Terminal 1(The same Terminal):
+'''bash
+ros2 launch f1tenth_gym_ros gym_bridge_launch.py
+'''
+This starts the simulator, publishes /scan, and waits for drive commands
+#### 4.4.2 Ackermann Drive / Teleoperation
+
+In Terminal 2:
+'''bash
+source /opt/ros/jazzy/setup.bash
+source ~/f110-test-ws/F110-Python312/test-package/install/setup.bash
+'''
+Option A — Publish Ackermann commands manually
+'''bash
+ros2 topic pub /drive ackermann_msgs/msg/AckermannDriveStamped \
+"{drive: {speed: 1.0, steering_angle: 0.3}}"
+'''
+You should see the car move inside the simulator.
+
+Option B — Keyboard teleop (optional)
+
+Install if necessary:
+'''bash
+sudo apt install ros-jazzy-teleop-twist-keyboard
+'''
+Run:
+'''bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+'''
+
+## 5. Contributions:
 1. Python 3.12 / Ubuntu 24.04 Compatibility: Fully verified and working with the latest OS and Python stack.
 2. Gymnasium API Compliance: Updated f110-gym to use the new Gymnasium standard (Ex. 5-element return from env.step).
 3. Modern Python Imports: Utilizes importlib.resources.files for reliable package asset loading in Python 3.12.
