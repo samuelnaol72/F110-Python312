@@ -114,10 +114,10 @@ Install if necessary:
 sudo apt update
 sudo apt install ros-jazzy-ackermann-msgs
 ```
-Run:
+Run(Adjust):
 ```bash
 ros2 topic pub /drive ackermann_msgs/msg/AckermannDriveStamped \
-"{drive: {speed: 1.0, steering_angle: 0.3}}"
+"{drive: {speed: N/A, steering_angle:N/A }}"
 ```
 You should see the car move inside the simulator.
 
