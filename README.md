@@ -44,13 +44,13 @@ This installs the core Python simulation library and its required packages.
 
 ```bash
 cd f110-gym-py312
-pip install -r requirements.txt
+pip install -r requirements.txt  # installed in ~/.local/lib/python3.12/site-packages
 ```
 
 ### 3.2 Install the f110-gym Python package
 
 ```bash
-pip install .
+pip install .       # installed in ~/.local/lib/python3.12/site-packages
 ```
 
 ---
