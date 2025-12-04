@@ -80,3 +80,8 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
 ```
+## Contributions:
+1. Python 3.12 / Ubuntu 24.04 Compatibility: Fully verified and working with the latest OS and Python stack.
+2. Gymnasium API Compliance: Updated f110-gym to use the new Gymnasium standard (Ex. 5-element return from env.step).
+3. Modern Python Imports: Utilizes importlib.resources.files for reliable package asset loading in Python 3.12.
+4. Dynamic Map Loading: Removes hardcoded paths, allowing the map to be configured externally via the gym-bridge. 
