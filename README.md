@@ -89,7 +89,7 @@ map_path: "/ABSOLUTE/PATH/TO/YOUR/MAP.yaml"
 
 Replace it with the correct absolute path to the map you want to use, for example:
 ```bash
-map_path: "/home/USERNAME/f110-test-ws/F110-Python312/f110-gym-py312/f110_gym/maps/vegas.yaml"
+map_path: "/home/USERNAME/f110-test-ws/F110-Python312/test-package/src/f110-gym-ros-py312/maps/berlin"
 ```
 
 Save the file.
