@@ -108,7 +108,7 @@ source /opt/ros/jazzy/setup.bash
 source ~/f110-test-ws/F110-Python312/test-package/install/setup.bash
 ```
 Option A — Publish Ackermann commands manually
-Install if necessary
+Install if necessary:
 ```bash
 sudo apt update
 sudo apt install ros-jazzy-ackermann-msgs
