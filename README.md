@@ -7,7 +7,7 @@ This guide outlines the steps to set up the F1/10 simulation environment with RO
 ## 1. Prerequisites
 
 * **Operating System:** Ubuntu 24.04 (Noble Numbat)
-* **ROS 2 Distribution:** ROS 2 Jazzy Ridley
+* **ROS 2 Distribution:** ROS 2 Jazzy 
 
 ---
 
