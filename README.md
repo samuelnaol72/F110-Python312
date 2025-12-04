@@ -59,7 +59,7 @@ pip install .
 
 This builds the ROS 2 package responsible for bridging the simulator with ROS.
 
-### 4.1 Navigate to the ROS 2 package source
+### 4.1 Navigate to the ROS 2 package source for gym-ros
 
 ```bash
 cd ..
