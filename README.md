@@ -74,7 +74,27 @@ sudo apt install ros-jazzy-ackermann-msgs
 ```
 
 ### 4.3 Build and source the workspace
+=== IMPORTANT ===
+Before building, you must edit the map path in the ROS config file.
 
+Open the simulator configuration file:
+```bash
+gedit src/f110-gym-ros-py312/config/sim.yaml
+```
+
+Edit the following entry:
+```bash
+map_path: "/ABSOLUTE/PATH/TO/YOUR/MAP.yaml"
+```
+
+Replace it with the correct absolute path to the map you want to use, for example:
+```bash
+map_path: "/home/USERNAME/f110-test-ws/F110-Python312/f110-gym-py312/f110_gym/maps/vegas.yaml"
+```
+
+Save the file.
+
+Now build and source:
 ```bash
 source /opt/ros/jazzy/setup.bash
 colcon build
