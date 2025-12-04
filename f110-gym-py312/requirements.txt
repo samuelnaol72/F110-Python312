@@ -5,6 +5,7 @@
 numpy>=1.23.0
 scipy
 pyyaml
+transforms3d==0.4.2
 
 # Reinforcement Learning Environment API
 gymnasium>=1.2.0
